@@ -41,7 +41,10 @@ const UserSearch = () => {
       {data?.data?.items?.length === 0 && username ? (
         <Alert message={`No users found for "${username}"`} />
       ) : (
-        <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing='8'>
+        <SimpleGrid
+          columns={{ base: 2, md: 3, lg: 4 }}
+          spacing={{ base: '4', lg: '8' }}
+        >
           {data?.data?.items?.map((user) => (
             <UserCard key={user.id} {...user} />
           ))}

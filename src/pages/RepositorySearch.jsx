@@ -41,7 +41,10 @@ const RepositorySearch = () => {
       {data?.data?.items?.length === 0 && repoName ? (
         <Alert message={`No repositories found for "${repoName}"`} />
       ) : (
-        <SimpleGrid columns={{ base: 2, md: 3, lg: 4 }} spacing='8'>
+        <SimpleGrid
+          columns={{ base: 2, md: 3, lg: 4 }}
+          spacing={{ base: '4', lg: '8' }}
+        >
           {data?.data?.items?.map((repo) => (
             <RepoCard key={repo.id} {...repo} />
           ))}
