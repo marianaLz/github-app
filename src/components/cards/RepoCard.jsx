@@ -38,9 +38,7 @@ const RepoCard = (repository) => {
           </Flex>
         </Flex>
 
-        <Text fontSize='xs'>
-          Created at: {formatDate(repository.created_at)}
-        </Text>
+        <Text fontSize='xs'>{formatDate(repository.created_at)}</Text>
 
         <Button
           as='a'
