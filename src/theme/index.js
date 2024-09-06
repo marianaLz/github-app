@@ -3,17 +3,21 @@ import { extendTheme } from '@chakra-ui/react';
 const theme = extendTheme({
   colors: {
     primary: '#1f883d',
-    'primary-bright': '#1c8139',
     'gray-100': '#f6f8fa',
     'gray-200': '#eff2f5',
     'gray-300': '#d0d9e0',
     'gray-400': '#59636e',
-    'gray-500': '#25292e',
+    'gray-500': '#2e333b',
+    'gray-600': '#25292e',
   },
   styles: {
     global: {
       body: {
-        color: 'gray-500',
+        color: 'gray-600',
+        _dark: {
+          bg: 'gray-500',
+          color: 'gray-100',
+        },
       },
     },
   },
@@ -30,25 +34,24 @@ const theme = extendTheme({
         fontWeight: '600',
       },
       variants: {
-        primary: {
-          bgColor: 'primary',
-          color: 'white',
-          _hover: {
-            bgColor: 'primary-bright',
-          },
-        },
-        secondary: {
+        solid: {
           bgColor: 'gray-100',
           border: '1px solid',
           borderColor: 'gray-300',
+          _dark: {
+            bgColor: 'gray-500',
+            borderColor: 'gray-400',
+          },
           _hover: {
             bgColor: 'gray-200',
+            _dark: {
+              bgColor: 'gray-600',
+            },
           },
         },
       },
       defaultProps: {
         size: 'sm',
-        variant: 'secondary',
       },
     },
     Card: {
@@ -56,6 +59,9 @@ const theme = extendTheme({
         container: {
           boxShadow: 'none',
           transition: 'all 0.3s',
+          _dark: {
+            bg: 'gray-500',
+          },
           _hover: {
             transform: 'scale(0.98)',
             transition: 'all 0.3s',
@@ -66,6 +72,9 @@ const theme = extendTheme({
     Heading: {
       baseStyle: {
         fontWeight: '600',
+        _dark: {
+          color: 'gray-100',
+        },
       },
     },
     Input: {
@@ -93,6 +102,13 @@ const theme = extendTheme({
               borderColor: 'gray-200',
             },
           },
+        },
+      },
+    },
+    Link: {
+      baseStyle: {
+        _dark: {
+          color: 'gray-100',
         },
       },
     },

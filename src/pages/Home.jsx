@@ -21,7 +21,7 @@ const Home = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         bgGradient='linear(to-r, blue.400, purple.500)'
-        color='white'
+        color='gray-100'
         minHeight='50vh'
         display='flex'
         alignItems='center'
