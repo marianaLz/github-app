@@ -18,6 +18,13 @@ const theme = extendTheme({
     },
   },
   components: {
+    Badge: {
+      baseStyle: {
+        borderRadius: 'lg',
+        px: '2',
+        textTransform: 'none',
+      },
+    },
     Button: {
       baseStyle: {
         fontWeight: '600',
