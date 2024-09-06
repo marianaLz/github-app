@@ -8,9 +8,10 @@ import {
   Container,
   Flex,
 } from '@chakra-ui/react';
+
 import LinkCard from '../components/cards/LinkCard';
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 const Home = () => {
   return (

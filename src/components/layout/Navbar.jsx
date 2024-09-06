@@ -39,7 +39,11 @@ const Navbar = () => {
           <Link as={RouterLink} to='/repositories'>
             Repositories
           </Link>
-          <Button onClick={toggleColorMode} variant='outline'>
+          <Button
+            aria-label='Toggle color mode'
+            onClick={toggleColorMode}
+            variant='outline'
+          >
             {isDark ? <SunIcon /> : <MoonIcon />}
           </Button>
         </Flex>

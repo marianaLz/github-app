@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Box, Card, CardBody, Flex, Heading, Text } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
-const MotionBox = motion(Box);
+const MotionBox = motion.create(Box);
 
 const LinkCard = ({ description, title, to }) => {
   return (
@@ -13,7 +13,7 @@ const LinkCard = ({ description, title, to }) => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <Card border='1px solid' borderColor='gray-300'>
+      <Card border='1px solid' borderColor='gray-300' h='full'>
         <CardBody>
           <Link to={to} style={{ textDecoration: 'none' }}>
             <Flex flexDir='column' gap='4'>
